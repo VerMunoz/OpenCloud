@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-world-vero
+spec:
+  replicas: 20
+  template:
+    metadata:
+      labels:
+        app: myapp-vero
+    spec:
+      containers:
+      - name: hello-world-vero
+        image: veroctin/webservice-ip
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+

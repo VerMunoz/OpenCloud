@@ -21,7 +21,7 @@ Tres máquinas virtuales: 4 CPU, 4 GB de RAM y 50 GB Cloud Hard Disk, con sistem
 En todos los nodos ejecutar el script de instalación de k8s, en este contiene algunas configuraciones y la instalación de docker, kubelet, kubeadm, kubectl.
 
 ```
-./install/k8s-local.sh 
+./shell/k8s-local.sh 
 ```
 
 ## Preparación del master

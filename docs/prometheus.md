@@ -51,7 +51,7 @@ Acceder a la interfaz gráfica de Grafana `` http://<ip_del_master:30105/login> 
 Remover la instalación ejecutar el script. 
 
 ```  
-./prom-delete.sh 
+./shell/prom-delete.sh 
 ```
 
 

@@ -1,5 +1,6 @@
 # Prometheus y Grafana en k8s
 
+Instalación de Prometheus v.2.1.0 y Grafana sobre un clúster de kubernetes. El clúster de kubernetes está compuesto por un master y tres nodos worker, basados en VMs montadas sobre OpenStack.
 ### Prerrequisitos 
 
 - Un clúster de Kubernetes.

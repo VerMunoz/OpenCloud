@@ -89,10 +89,12 @@ Grupo de nodos:
      Tipo de máquina: 1 vCPU
 ```
 Una vez que se configuraron las anteriores especificaciones, seleccionar **Crear**. 
+
 ![GKE-create](https://raw.githubusercontent.com/VerMunoz/OpenCloud/master/images/gke-createcluster.png)
 
 ### Conexión del servidor Halyard al cluster GKE
 Una vez creado el cluster de kubernetes, se conectará al clúster mediante el comando que genera en la parte de “Conectarse al clúster mediante la línea de comando". 
+
 ![GKE-create](https://raw.githubusercontent.com/VerMunoz/OpenCloud/master/images/gke-connectcluster.png)
 
 En el servidor de halyard, se configura la opción "use client certificate", para que cambiar las certificados.

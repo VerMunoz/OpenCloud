@@ -130,6 +130,10 @@ hal config provider kubernetes account add my-k8s-account \
 ```
 Es necesario verificar la ruta del archivo de configuración de kubernetes, por default se crea en ~/.kube/config. Si el archivo está en otra ruta, agregar la bandera `` --kubeconfig-file /ruta-de-kubeconfig/ ``
 
+##### GKE 
+Para configurar Google Kubernetes Engine, es el mismo proceso, solo que como prerrequisito, se tiene que configurar el [acceso a GKE](https://github.com/VerMunoz/OpenCloud/blob/master/docs/gcp.md#acceso-a-gke).
+
+
 <div id='id2-2' />
 
 #### Kubernetes v2 (basado en manifiesto)

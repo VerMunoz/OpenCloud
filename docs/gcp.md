@@ -1,6 +1,6 @@
 # GCP  - Spinnaker
 
-Este documento está orientado a la preparación de GCP para utilizarlo con Docker Registry y una cuenta de Kubernetes (GKE) para vincularlo con Spinnaker y probar un ambiente multicloud.
+Este documento está orientado a la preparación de GCP para utilizarlo con Docker Registry ([GCR](#id1)) y una cuenta de Kubernetes ([GKE](#id2)) para vincularlo con Spinnaker y probar un ambiente multicloud.
 
 ## Prerrequisitos 
 - Tener una cuenta en GCP.
@@ -40,6 +40,8 @@ Vincular el proyecto en el que se está trabajando.
 ```
 gcloud config set project <nombre-del-proyecto>
 ```
+<div id='id1' />
+
 ## GCR 
 
 GCR (Google Container Registry) se utilizará como un repositorio de imagenes que se utilizará para almacenar las imagenes que se desplegarán con Spinnaker. 
@@ -75,6 +77,7 @@ gcloud iam service-accounts keys create $SERVICE_ACCOUNT_DEST \
 
 PASSWORD_FILE=$SERVICE_ACCOUNT_DEST
 ```
+<div id='id2' />
 
 ## Creación de un clúster GKE 
 Se creará un clúster de Kubernetes en GKE (Google Kubernetes Engine).

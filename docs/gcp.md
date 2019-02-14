@@ -110,6 +110,7 @@ gcloud container clusters get-credentials standard-cluster-1 --zone us-central1-
 ```
 Al ejecutar este comando, se genera el archivo de configuración que requiere halyard para poderse comunicar con el cluster, en este caso, el comando se ejecutó desde /root/, por lo que el archivo de configuración se creará en la misma ubicación que se ejecutó el comando, es decir /root/admin.conf
 
+### Acceso a GKE 
 Para tener total acceso al cluster de kubernetes, es necesario crear una cuenta de servicio.
 
 Identificar el nombre del contexto del cluster. 

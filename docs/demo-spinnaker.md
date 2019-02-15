@@ -62,20 +62,13 @@ Seleccionar `` Create trigger ``.
 
 Para probar la compilación y generar el registro del contenedor, realizar los siguientes pasos. 
 
-Verificar la etiqueta release.
 ```
 git checkout -b release
-```
-Agregar todos los archivos. 
-```
+
 git add -A 
-```
-Guardar cambios. 
-```
+
 git commit -m 'First build!'
-```
-Lanzar la etiqueta release. 
-```
+
 git push origin release
 ```
 ## Spinnaker pipelines
@@ -162,14 +155,21 @@ Pipeline: Deploy to Stage
 Pipeline Status: successful y trrigger enabled. 
 ```
 
-Para la asignación manual de la validación. 
+Para la asignación manual de la validación. Agregar un Stage: 
+- Manual Judgment
+
 Seleccionar `` Add Stage``
 ```
 Type: Manual Judgment 
 ```
-Guardar cambios.
-
-![Validate](https://raw.githubusercontent.com/VerMunoz/OpenCloud/master/images/demo-validate.png)
 
 #### Pipeline ambiente de producción 
+
+De la misma forma que se crearon los pipelines de ambiente de prueba y validación, crear un pipeline con los siguientes stages: 
+- Find image form Cluster.
+- Deploy.
+- Wait.
+- Resize server group.
+- Wait.
+- Destroy server group.
 

@@ -80,5 +80,11 @@ kube-work02                Ready        <none>     14m        v1.11.1
 kube-work03                Ready        <none>     14m        v1.11.1 
 ```
 
+### Autocompletar comando Kubectl
+```
+source <(kubectl completion bash) 
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+```
+
 
 

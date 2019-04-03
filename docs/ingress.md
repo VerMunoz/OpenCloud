@@ -1,6 +1,8 @@
-# Ingress Controller k8s 
+# Ingress controler con LoadBalancer externo 
+Para
 
-## Instalación de Ingress con Nginx 
+## Ingress Controller k8s 
+### Instalación de Ingress con Nginx 
 
 La instalación contiene la creación de los siguientes elementos.
 - Namespace
@@ -15,6 +17,7 @@ Instalación de ingress con Nginx
 ```
 kubectl create -f install/ingress-nginx.yaml
 ```
+
 
 
 

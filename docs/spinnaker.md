@@ -283,4 +283,9 @@ hal config security ui edit \
 hal config security api edit \ 
     --override-base-url "http://<ip-master>:30808"  
 ```
+Aplicar los cambios.
+```
+hal deploy apply -d
+```
+
 Verificar la interfaz gráfica en el navegador `` http://<ip-master>:30900``

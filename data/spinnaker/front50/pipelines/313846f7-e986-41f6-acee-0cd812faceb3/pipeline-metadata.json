@@ -1,0 +1,130 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "codelab2",
+  "lastModifiedBy" : "anonymous",
+  "name" : "Promote to Prod",
+  "stages" : [ {
+    "cloudProvider" : "kubernetes",
+    "cloudProviderType" : "kubernetes",
+    "cluster" : "codelab2-stage",
+    "credentials" : "my-k8s-account",
+    "name" : "Find Image from Cluster",
+    "namespaces" : [ "default" ],
+    "onlyEnabled" : true,
+    "refId" : "1",
+    "requisiteStageRefIds" : [ ],
+    "selectionStrategy" : "NEWEST",
+    "type" : "findImage"
+  }, {
+    "clusters" : [ {
+      "account" : "my-k8s-v1-google",
+      "application" : "codelab2",
+      "cloudProvider" : "kubernetes",
+      "containers" : [ {
+        "args" : [ ],
+        "command" : [ ],
+        "envFrom" : [ ],
+        "envVars" : [ ],
+        "imageDescription" : {
+          "cluster" : "codelab2-stage",
+          "fromContext" : true,
+          "imageId" : "Find Image from Cluster:undefined",
+          "repository" : "Find Image from Cluster",
+          "stageId" : "1"
+        },
+        "imagePullPolicy" : "IFNOTPRESENT",
+        "limits" : { },
+        "name" : "find-image-from-cluster",
+        "ports" : [ {
+          "containerPort" : 80,
+          "name" : "http",
+          "protocol" : "TCP"
+        } ],
+        "requests" : { },
+        "volumeMounts" : [ ]
+      } ],
+      "deployment" : {
+        "deploymentStrategy" : {
+          "rollingUpdate" : {
+            "maxSurge" : 1,
+            "maxUnavailable" : 1
+          },
+          "type" : "RollingUpdate"
+        },
+        "enabled" : false,
+        "minReadySeconds" : 0
+      },
+      "dnsPolicy" : "ClusterFirst",
+      "initContainers" : [ ],
+      "interestingHealthProviderNames" : [ "KubernetesContainer", "KubernetesPod" ],
+      "loadBalancers" : [ "codelab2-prod" ],
+      "namespace" : "default",
+      "nodeSelector" : { },
+      "podAnnotations" : { },
+      "provider" : "kubernetes",
+      "region" : "default",
+      "replicaSetAnnotations" : { },
+      "stack" : "prod",
+      "strategy" : "redblack",
+      "targetSize" : 1,
+      "terminationGracePeriodSeconds" : 30,
+      "useSourceCapacity" : false,
+      "volumeSources" : [ ]
+    } ],
+    "name" : "Deploy",
+    "refId" : "2",
+    "requisiteStageRefIds" : [ "1" ],
+    "type" : "deploy"
+  }, {
+    "name" : "Wait",
+    "refId" : "3",
+    "requisiteStageRefIds" : [ "2" ],
+    "type" : "wait",
+    "waitTime" : 5
+  }, {
+    "action" : "scale_exact",
+    "capacity" : {
+      "desired" : 0
+    },
+    "cloudProvider" : "kubernetes",
+    "cloudProviderType" : "kubernetes",
+    "cluster" : "codelab2-prod",
+    "credentials" : "my-k8s-v1-google",
+    "name" : "Resize Server Group",
+    "namespaces" : [ "default" ],
+    "refId" : "4",
+    "requisiteStageRefIds" : [ "3" ],
+    "resizeType" : "exact",
+    "target" : "ancestor_asg_dynamic",
+    "type" : "resizeServerGroup"
+  }, {
+    "name" : "Wait",
+    "refId" : "5",
+    "requisiteStageRefIds" : [ "4" ],
+    "type" : "wait",
+    "waitTime" : 30
+  }, {
+    "cloudProvider" : "kubernetes",
+    "cloudProviderType" : "kubernetes",
+    "cluster" : "codelab2-prod",
+    "credentials" : "my-k8s-v1-google",
+    "interestingHealthProviderNames" : [ "KubernetesService" ],
+    "name" : "Destroy Server Group",
+    "namespaces" : [ "default" ],
+    "refId" : "6",
+    "requisiteStageRefIds" : [ "5" ],
+    "target" : "oldest_asg_dynamic",
+    "type" : "destroyServerGroup"
+  } ],
+  "index" : 2,
+  "id" : "313846f7-e986-41f6-acee-0cd812faceb3",
+  "triggers" : [ {
+    "application" : "codelab2",
+    "enabled" : true,
+    "pipeline" : "7df7a8c2-2b51-474d-84d3-7cb2017d7fab",
+    "status" : [ "successful" ],
+    "type" : "pipeline"
+  } ],
+  "updateTs" : "1542151724000"
+}

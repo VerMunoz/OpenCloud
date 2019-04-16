@@ -1,0 +1,13 @@
+{
+  "id" : "9bcfbdcc-774c-411e-9e5b-443ce4226e2d",
+  "name" : "demoappWeb",
+  "email" : "vero@spin.com",
+  "config" : {
+    "pipelineConfigs" : [ ],
+    "applications" : [ ],
+    "clusters" : [ ]
+  },
+  "updateTs" : 1550186523815,
+  "createTs" : 1550186523815,
+  "lastModifiedBy" : "anonymous"
+}

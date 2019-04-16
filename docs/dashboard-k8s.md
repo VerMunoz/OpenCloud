@@ -5,13 +5,13 @@
 Para  instalar los componentes del dashboard, se ejecuta el siguiente comando.
 
 ```
-kubectl create -f deploys/kubernetes-dashboard.yaml
+kubectl apply -f deploys/kubernetes-dashboard.yaml
 ```
 
 El dashboard se instala con privilegios mínimos de rol de usuario, para acceder completamente con permiso administrativo completo. se crean roles permisos de autentificación RBAC.
 
 ```
-kubectl create -f roles/dashboard-admin.yaml
+kubectl apply -f roles/dashboard-admin.yaml
 ```
 
 Para acceder al dashboard, se debe de crear un canal seguro para el clúster mediante un proxy, este comando se ejecutará en segundo plano.  

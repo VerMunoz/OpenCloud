@@ -1,0 +1,24 @@
+{
+  "name" : "DEMO-CHAOS",
+  "description" : null,
+  "email" : "pedro.quinonez@americamovil.com",
+  "updateTs" : "1554428900000",
+  "createTs" : "1554428858157",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "trafficGuards" : [ ],
+  "chaosMonkey" : {
+    "meanTimeBetweenKillsInWorkDays" : 2,
+    "regionsAreIndependent" : true,
+    "minTimeBetweenKillsInWorkDays" : 1,
+    "grouping" : "cluster",
+    "enabled" : true,
+    "exceptions" : [ ]
+  },
+  "user" : "[anonymous]",
+  "dataSources" : {
+    "disabled" : [ ],
+    "enabled" : [ "canaryConfigs" ]
+  },
+  "trafficGuards" : [ ]
+}

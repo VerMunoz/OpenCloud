@@ -1,0 +1,10 @@
+{
+  "name" : "APP-V2",
+  "description" : null,
+  "email" : "example@example.com",
+  "updateTs" : null,
+  "createTs" : "1542157227407",
+  "lastModifiedBy" : "anonymous",
+  "instancePort" : 80,
+  "cloudProviders" : [ "kubernetes" ]
+}

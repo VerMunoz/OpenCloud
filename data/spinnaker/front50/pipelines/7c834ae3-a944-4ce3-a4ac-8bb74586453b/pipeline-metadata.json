@@ -1,0 +1,11 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "grem",
+  "lastModifiedBy" : "anonymous",
+  "name" : "grem",
+  "stages" : [ ],
+  "index" : 0,
+  "id" : "7c834ae3-a944-4ce3-a4ac-8bb74586453b",
+  "triggers" : [ ]
+}

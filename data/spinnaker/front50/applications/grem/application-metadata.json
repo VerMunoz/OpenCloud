@@ -1,0 +1,23 @@
+{
+  "name" : "GREM",
+  "description" : null,
+  "email" : "vero9508@gmail.com",
+  "updateTs" : "1554408756000",
+  "createTs" : "1554406608559",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "",
+  "trafficGuards" : [ ],
+  "instancePort" : 80,
+  "customBanners" : [ {
+    "backgroundColor" : "var(--color-success)",
+    "text" : "Your custom banner text",
+    "textColor" : "var(--color-text-on-dark)",
+    "enabled" : false
+  } ],
+  "user" : "[anonymous]",
+  "dataSources" : {
+    "disabled" : [ ],
+    "enabled" : [ "canaryConfigs" ]
+  },
+  "trafficGuards" : [ ]
+}

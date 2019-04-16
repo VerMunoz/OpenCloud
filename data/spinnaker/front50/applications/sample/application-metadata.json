@@ -1,0 +1,10 @@
+{
+  "name" : "SAMPLE",
+  "description" : null,
+  "email" : "example@example.com",
+  "updateTs" : null,
+  "createTs" : "1542258158850",
+  "lastModifiedBy" : "anonymous",
+  "instancePort" : 80,
+  "cloudProviders" : [ "kubernetes" ]
+}

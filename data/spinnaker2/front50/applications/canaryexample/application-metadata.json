@@ -1,0 +1,14 @@
+{
+  "name" : "CANARYEXAMPLE",
+  "description" : null,
+  "email" : "vero9508@gmail.com",
+  "updateTs" : "1554332222000",
+  "createTs" : "1554332180953",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "user" : "[anonymous]",
+  "dataSources" : {
+    "disabled" : [ ],
+    "enabled" : [ "canaryConfigs" ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "sampleapp",
+  "lastModifiedBy" : "anonymous",
+  "name" : "sm",
+  "stages" : [ ],
+  "index" : 0,
+  "id" : "e2fa74d1-2c0a-429e-a31e-d022502dba11",
+  "triggers" : [ ]
+}

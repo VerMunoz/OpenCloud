@@ -1,0 +1,19 @@
+{
+  "name" : "APP1",
+  "description" : "app demo",
+  "email" : "vero9508@gmail.com",
+  "updateTs" : null,
+  "createTs" : "1554422423405",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "trafficGuards" : [ ],
+  "chaosMonkey" : {
+    "meanTimeBetweenKillsInWorkDays" : 2,
+    "regionsAreIndependent" : true,
+    "minTimeBetweenKillsInWorkDays" : 1,
+    "grouping" : "cluster",
+    "enabled" : false,
+    "exceptions" : [ ]
+  },
+  "user" : "[anonymous]"
+}

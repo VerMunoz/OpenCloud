@@ -1,0 +1,19 @@
+{
+  "name" : "SAMPLEAPP",
+  "description" : null,
+  "email" : "vero9508@gmail.com",
+  "updateTs" : null,
+  "createTs" : "1554413949044",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "",
+  "trafficGuards" : [ ],
+  "chaosMonkey" : {
+    "meanTimeBetweenKillsInWorkDays" : 2,
+    "regionsAreIndependent" : true,
+    "minTimeBetweenKillsInWorkDays" : 1,
+    "grouping" : "cluster",
+    "enabled" : true,
+    "exceptions" : [ ]
+  },
+  "user" : "[anonymous]"
+}

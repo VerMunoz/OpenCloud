@@ -1,0 +1,83 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "codelab2",
+  "lastModifiedBy" : "anonymous",
+  "name" : "Deploy app",
+  "stages" : [ {
+    "clusters" : [ {
+      "account" : "my-k8s-account",
+      "application" : "codelab2",
+      "cloudProvider" : "kubernetes",
+      "containers" : [ {
+        "args" : [ ],
+        "command" : [ ],
+        "envFrom" : [ ],
+        "envVars" : [ ],
+        "imageDescription" : {
+          "account" : "my-docker-registry-gcr",
+          "fromTrigger" : true,
+          "imageId" : "gcr.io/spin-test-221116/sample-app (Tag resolved at runtime)",
+          "registry" : "gcr.io",
+          "repository" : "spin-test-221116/sample-app",
+          "tag" : ""
+        },
+        "imagePullPolicy" : "IFNOTPRESENT",
+        "limits" : { },
+        "name" : "spin-test-221116-sample-app",
+        "ports" : [ {
+          "containerPort" : 80,
+          "name" : "http",
+          "protocol" : "TCP"
+        } ],
+        "requests" : { },
+        "volumeMounts" : [ ]
+      } ],
+      "deployment" : {
+        "deploymentStrategy" : {
+          "rollingUpdate" : {
+            "maxSurge" : 1,
+            "maxUnavailable" : 1
+          },
+          "type" : "RollingUpdate"
+        },
+        "enabled" : false,
+        "minReadySeconds" : 0
+      },
+      "dnsPolicy" : "ClusterFirst",
+      "initContainers" : [ ],
+      "interestingHealthProviderNames" : [ "KubernetesContainer", "KubernetesPod" ],
+      "loadBalancers" : [ "codelab2-stage" ],
+      "maxRemainingAsgs" : 4,
+      "namespace" : "default",
+      "nodeSelector" : { },
+      "podAnnotations" : { },
+      "provider" : "kubernetes",
+      "region" : "default",
+      "replicaSetAnnotations" : { },
+      "scaleDown" : true,
+      "stack" : "stage",
+      "strategy" : "redblack",
+      "targetSize" : 1,
+      "terminationGracePeriodSeconds" : 30,
+      "useSourceCapacity" : false,
+      "volumeSources" : [ ]
+    } ],
+    "name" : "Deploy",
+    "refId" : "1",
+    "requisiteStageRefIds" : [ ],
+    "type" : "deploy"
+  } ],
+  "index" : 3,
+  "id" : "925cce89-5138-4ef2-8f2a-89465e7e8562",
+  "triggers" : [ {
+    "account" : "my-docker-registry-gcr",
+    "enabled" : true,
+    "organization" : "spin-test-221116",
+    "registry" : "gcr.io",
+    "repository" : "spin-test-221116/sample-app",
+    "tag" : "",
+    "type" : "docker"
+  } ],
+  "updateTs" : "1542309125000"
+}

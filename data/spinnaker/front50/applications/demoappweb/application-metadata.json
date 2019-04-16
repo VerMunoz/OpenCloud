@@ -1,0 +1,10 @@
+{
+  "name" : "DEMOAPPWEB",
+  "description" : null,
+  "email" : "vero@spinnaker.com",
+  "updateTs" : null,
+  "createTs" : "1542839844335",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "user" : "[anonymous]"
+}

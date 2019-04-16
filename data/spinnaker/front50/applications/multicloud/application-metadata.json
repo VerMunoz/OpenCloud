@@ -1,0 +1,10 @@
+{
+  "name" : "MULTICLOUD",
+  "description" : null,
+  "email" : "vero@spinnaker.com",
+  "updateTs" : null,
+  "createTs" : "1553736622153",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "user" : "[anonymous]"
+}

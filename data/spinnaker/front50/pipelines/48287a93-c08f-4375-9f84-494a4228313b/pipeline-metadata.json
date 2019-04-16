@@ -1,0 +1,26 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "demoappweb",
+  "lastModifiedBy" : "anonymous",
+  "name" : "Validate",
+  "stages" : [ {
+    "failPipeline" : true,
+    "judgmentInputs" : [ ],
+    "name" : "Manual Judgment",
+    "notifications" : [ ],
+    "refId" : "1",
+    "requisiteStageRefIds" : [ ],
+    "type" : "manualJudgment"
+  } ],
+  "index" : 1,
+  "id" : "48287a93-c08f-4375-9f84-494a4228313b",
+  "triggers" : [ {
+    "application" : "demoappweb",
+    "enabled" : true,
+    "pipeline" : "fa8c96ac-f5b3-4d0c-b1f1-0fd48ab4f5c8",
+    "status" : [ "successful" ],
+    "type" : "pipeline"
+  } ],
+  "updateTs" : "1542840472000"
+}

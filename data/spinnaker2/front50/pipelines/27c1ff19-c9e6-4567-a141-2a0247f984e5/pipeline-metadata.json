@@ -1,0 +1,26 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "nginxnew",
+  "lastModifiedBy" : "anonymous",
+  "name" : "Ngnix",
+  "stages" : [ {
+    "clusters" : [ ],
+    "name" : "Deploy",
+    "refId" : "1",
+    "requisiteStageRefIds" : [ ],
+    "type" : "deploy"
+  } ],
+  "index" : 0,
+  "id" : "27c1ff19-c9e6-4567-a141-2a0247f984e5",
+  "triggers" : [ {
+    "account" : "my-docker-registry",
+    "enabled" : true,
+    "organization" : "library",
+    "registry" : "index.docker.io",
+    "repository" : "library/nginx",
+    "tag" : "",
+    "type" : "docker"
+  } ],
+  "updateTs" : "1554268345000"
+}

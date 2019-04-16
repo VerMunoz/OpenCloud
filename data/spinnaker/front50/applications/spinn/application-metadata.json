@@ -1,0 +1,10 @@
+{
+  "name" : "SPINN",
+  "description" : null,
+  "email" : "vero@spinnaker.com",
+  "updateTs" : null,
+  "createTs" : "1542408291712",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "user" : "[anonymous]"
+}

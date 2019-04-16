@@ -1,0 +1,16 @@
+{
+  "name" : "EXAMPLECANARY",
+  "description" : null,
+  "email" : "vero9508@gmail.com",
+  "updateTs" : "1554400853000",
+  "createTs" : "1554400811210",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "",
+  "trafficGuards" : [ ],
+  "user" : "[anonymous]",
+  "dataSources" : {
+    "disabled" : [ ],
+    "enabled" : [ "canaryConfigs" ]
+  },
+  "trafficGuards" : [ ]
+}

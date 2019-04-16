@@ -1,0 +1,20 @@
+{
+  "name" : "HELLO-WORLD",
+  "description" : null,
+  "email" : "pedro.quinonez@americamovil.com",
+  "updateTs" : null,
+  "createTs" : "1554742186472",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "trafficGuards" : [ ],
+  "instancePort" : 80,
+  "chaosMonkey" : {
+    "meanTimeBetweenKillsInWorkDays" : 2,
+    "regionsAreIndependent" : true,
+    "minTimeBetweenKillsInWorkDays" : 1,
+    "grouping" : "cluster",
+    "enabled" : false,
+    "exceptions" : [ ]
+  },
+  "user" : "[anonymous]"
+}

@@ -1,0 +1,131 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "demoappweb",
+  "lastModifiedBy" : "anonymous",
+  "name" : "Promote to Prod",
+  "stages" : [ {
+    "cloudProvider" : "kubernetes",
+    "cloudProviderType" : "kubernetes",
+    "cluster" : "demoappweb-stage",
+    "credentials" : "my-k8s-account",
+    "name" : "Find Image from Cluster",
+    "namespaces" : [ "default" ],
+    "onlyEnabled" : true,
+    "refId" : "1",
+    "requisiteStageRefIds" : [ ],
+    "selectionStrategy" : "NEWEST",
+    "type" : "findImage"
+  }, {
+    "clusters" : [ {
+      "account" : "my-k8s-v1-google",
+      "application" : "demoappweb",
+      "cloudProvider" : "kubernetes",
+      "containers" : [ {
+        "args" : [ ],
+        "command" : [ ],
+        "envFrom" : [ ],
+        "envVars" : [ ],
+        "imageDescription" : {
+          "cluster" : "demoappweb-stage",
+          "fromContext" : true,
+          "imageId" : "Find Image from Cluster:undefined",
+          "repository" : "Find Image from Cluster",
+          "stageId" : "1"
+        },
+        "imagePullPolicy" : "IFNOTPRESENT",
+        "limits" : { },
+        "name" : "find-image-from-cluster",
+        "ports" : [ {
+          "containerPort" : 80,
+          "name" : "http",
+          "protocol" : "TCP"
+        } ],
+        "requests" : { },
+        "volumeMounts" : [ ]
+      } ],
+      "deployment" : {
+        "deploymentStrategy" : {
+          "rollingUpdate" : {
+            "maxSurge" : 1,
+            "maxUnavailable" : 1
+          },
+          "type" : "RollingUpdate"
+        },
+        "enabled" : false,
+        "minReadySeconds" : 0
+      },
+      "dnsPolicy" : "ClusterFirst",
+      "initContainers" : [ ],
+      "interestingHealthProviderNames" : [ "KubernetesContainer", "KubernetesPod" ],
+      "loadBalancers" : [ "demoappweb-prod" ],
+      "maxRemainingAsgs" : 4,
+      "namespace" : "default",
+      "nodeSelector" : { },
+      "podAnnotations" : { },
+      "provider" : "kubernetes",
+      "region" : "default",
+      "replicaSetAnnotations" : { },
+      "stack" : "prod",
+      "strategy" : "redblack",
+      "targetSize" : 1,
+      "terminationGracePeriodSeconds" : 30,
+      "useSourceCapacity" : false,
+      "volumeSources" : [ ]
+    } ],
+    "name" : "Deploy",
+    "refId" : "2",
+    "requisiteStageRefIds" : [ "1" ],
+    "type" : "deploy"
+  }, {
+    "name" : "Wait",
+    "refId" : "3",
+    "requisiteStageRefIds" : [ "2" ],
+    "type" : "wait",
+    "waitTime" : 5
+  }, {
+    "action" : "scale_exact",
+    "capacity" : {
+      "desired" : 0
+    },
+    "cloudProvider" : "kubernetes",
+    "cloudProviderType" : "kubernetes",
+    "cluster" : "demoappweb-prod",
+    "credentials" : "my-k8s-v1-google",
+    "name" : "Resize Server Group",
+    "namespaces" : [ "default" ],
+    "refId" : "4",
+    "requisiteStageRefIds" : [ "3" ],
+    "resizeType" : "exact",
+    "target" : "ancestor_asg_dynamic",
+    "type" : "resizeServerGroup"
+  }, {
+    "name" : "Wait",
+    "refId" : "5",
+    "requisiteStageRefIds" : [ "4" ],
+    "type" : "wait",
+    "waitTime" : 30
+  }, {
+    "cloudProvider" : "kubernetes",
+    "cloudProviderType" : "kubernetes",
+    "cluster" : "demoappweb-prod",
+    "credentials" : "my-k8s-v1-google",
+    "interestingHealthProviderNames" : [ "KubernetesService" ],
+    "name" : "Destroy Server Group",
+    "namespaces" : [ "default" ],
+    "refId" : "6",
+    "requisiteStageRefIds" : [ "5" ],
+    "target" : "oldest_asg_dynamic",
+    "type" : "destroyServerGroup"
+  } ],
+  "index" : 2,
+  "id" : "ee437328-153a-4c0a-9746-1b11e2720a91",
+  "triggers" : [ {
+    "application" : "demoappweb",
+    "enabled" : true,
+    "pipeline" : "48287a93-c08f-4375-9f84-494a4228313b",
+    "status" : [ "successful" ],
+    "type" : "pipeline"
+  } ],
+  "updateTs" : "1550784382000"
+}

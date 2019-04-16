@@ -1,0 +1,18 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "demo-chaos",
+  "lastModifiedBy" : "anonymous",
+  "name" : "demo",
+  "stages" : [ ],
+  "index" : 0,
+  "id" : "64aa1e0d-59a1-4481-8f18-0ed94d8b2894",
+  "triggers" : [ {
+    "account" : "my-docker-registry",
+    "enabled" : true,
+    "organization" : "",
+    "repository" : "",
+    "type" : "docker"
+  } ],
+  "updateTs" : "1554429053000"
+}

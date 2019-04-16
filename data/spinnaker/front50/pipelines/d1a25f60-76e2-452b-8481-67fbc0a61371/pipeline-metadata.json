@@ -1,0 +1,11 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "codelab2",
+  "lastModifiedBy" : "anonymous",
+  "name" : "appp",
+  "stages" : [ ],
+  "index" : 5,
+  "id" : "d1a25f60-76e2-452b-8481-67fbc0a61371",
+  "triggers" : [ ]
+}

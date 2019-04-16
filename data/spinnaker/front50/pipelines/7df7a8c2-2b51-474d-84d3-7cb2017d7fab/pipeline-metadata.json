@@ -1,0 +1,26 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "codelab2",
+  "lastModifiedBy" : "anonymous",
+  "name" : "Validate",
+  "stages" : [ {
+    "failPipeline" : true,
+    "judgmentInputs" : [ ],
+    "name" : "Manual Judgment",
+    "notifications" : [ ],
+    "refId" : "1",
+    "requisiteStageRefIds" : [ ],
+    "type" : "manualJudgment"
+  } ],
+  "index" : 1,
+  "id" : "7df7a8c2-2b51-474d-84d3-7cb2017d7fab",
+  "triggers" : [ {
+    "application" : "codelab2",
+    "enabled" : true,
+    "pipeline" : "d66bf2a0-e65f-4bff-a606-6c5a19b9360f",
+    "status" : [ "successful" ],
+    "type" : "pipeline"
+  } ],
+  "updateTs" : "1542151272000"
+}

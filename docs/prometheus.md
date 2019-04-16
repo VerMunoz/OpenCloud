@@ -18,8 +18,36 @@ Este repositorio contiene la instalación automatizada de Prometheus v.2.1.0 y G
  - Deployment: despliegue de la aplicación 
  - Service: expone el servicio tipo NodePort en el para Prometheus por el puerto 30000 y para grafana por el puerto 30104.
 
+Editar el archivo ``install/prometheus-all.yaml``
 
-Para la instalación de Kubernetes y grafana, ejecute el siguiente comando.
+En la sección de ConfigMap cambiar la dirección IP en ``replacement`` por la ``IP del master o dominio del cluster``. 
+
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: monitoring
+  labels:
+    kubernetes.io/cluster-service: "true"
+    kubernetes.io/hostname: "true"
+data:
+  prometheus.yml: |
+    scrape_configs:
+    - job_name: kubernetes-nodes-kubelet
+      scrape_interval: 10s
+      scrape_timeout: 10s
+      kubernetes_sd_configs:
+      - role: node
+      relabel_configs:
+      - action: labelmap
+        regex: __meta_kubernetes_node_label_(.+)
+      - target_label: __address__
+        replacement: 192.10.24.4:443
+```
+
+
+Para la instalación de Prometheus y Grafana, ejecute el siguiente comando.
 ```
 kubectl create -f install/prometheus-all.yaml 
 ```

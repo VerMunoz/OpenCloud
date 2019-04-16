@@ -1,0 +1,269 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "multicloud",
+  "lastModifiedBy" : "anonymous",
+  "name" : "multicloud",
+  "stages" : [ {
+    "clusters" : [ {
+      "account" : "my-k8s-account",
+      "application" : "multicloud",
+      "cloudProvider" : "kubernetes",
+      "containers" : [ {
+        "args" : [ ],
+        "command" : [ ],
+        "envFrom" : [ ],
+        "envVars" : [ ],
+        "imageDescription" : {
+          "account" : "my-docker-registry",
+          "fromTrigger" : true,
+          "imageId" : "index.docker.io/library/nginx (Tag resolved at runtime)",
+          "registry" : "index.docker.io",
+          "repository" : "library/nginx",
+          "tag" : ""
+        },
+        "imagePullPolicy" : "IFNOTPRESENT",
+        "limits" : { },
+        "name" : "library-nginx",
+        "ports" : [ {
+          "containerPort" : 80,
+          "name" : "http",
+          "protocol" : "TCP"
+        } ],
+        "requests" : { },
+        "volumeMounts" : [ ]
+      } ],
+      "deployment" : {
+        "deploymentStrategy" : {
+          "rollingUpdate" : {
+            "maxSurge" : 1,
+            "maxUnavailable" : 1
+          },
+          "type" : "RollingUpdate"
+        },
+        "enabled" : false,
+        "minReadySeconds" : 0
+      },
+      "dnsPolicy" : "ClusterFirst",
+      "initContainers" : [ ],
+      "interestingHealthProviderNames" : [ "KubernetesContainer", "KubernetesPod" ],
+      "loadBalancers" : [ "multicloud-prod" ],
+      "maxRemainingAsgs" : 2,
+      "namespace" : "default",
+      "nodeSelector" : { },
+      "podAnnotations" : { },
+      "provider" : "kubernetes",
+      "region" : "default",
+      "replicaSetAnnotations" : { },
+      "stack" : "prod",
+      "strategy" : "redblack",
+      "targetSize" : 1,
+      "terminationGracePeriodSeconds" : 30,
+      "useSourceCapacity" : false,
+      "volumeSources" : [ ]
+    } ],
+    "name" : "Deploy k8s local",
+    "refId" : "2",
+    "requisiteStageRefIds" : [ ],
+    "type" : "deploy"
+  }, {
+    "clusters" : [ {
+      "account" : "my-k8s-v1-google",
+      "application" : "multicloud",
+      "cloudProvider" : "kubernetes",
+      "containers" : [ {
+        "args" : [ ],
+        "command" : [ ],
+        "envFrom" : [ ],
+        "envVars" : [ ],
+        "imageDescription" : {
+          "account" : "my-docker-registry",
+          "fromTrigger" : true,
+          "imageId" : "index.docker.io/library/nginx (Tag resolved at runtime)",
+          "registry" : "index.docker.io",
+          "repository" : "library/nginx",
+          "tag" : ""
+        },
+        "imagePullPolicy" : "IFNOTPRESENT",
+        "limits" : { },
+        "name" : "library-nginx",
+        "ports" : [ {
+          "containerPort" : 80,
+          "name" : "http",
+          "protocol" : "TCP"
+        } ],
+        "requests" : { },
+        "volumeMounts" : [ ]
+      } ],
+      "deployment" : {
+        "deploymentStrategy" : {
+          "rollingUpdate" : {
+            "maxSurge" : 1,
+            "maxUnavailable" : 1
+          },
+          "type" : "RollingUpdate"
+        },
+        "enabled" : false,
+        "minReadySeconds" : 0
+      },
+      "dnsPolicy" : "ClusterFirst",
+      "initContainers" : [ ],
+      "interestingHealthProviderNames" : [ "KubernetesContainer", "KubernetesPod" ],
+      "loadBalancers" : [ "multicloud-prod" ],
+      "maxRemainingAsgs" : 2,
+      "namespace" : "default",
+      "nodeSelector" : { },
+      "podAnnotations" : { },
+      "provider" : "kubernetes",
+      "region" : "default",
+      "replicaSetAnnotations" : { },
+      "stack" : "prod",
+      "strategy" : "redblack",
+      "targetSize" : 1,
+      "terminationGracePeriodSeconds" : 30,
+      "useSourceCapacity" : false,
+      "volumeSources" : [ ]
+    } ],
+    "name" : "Deploy GCP",
+    "refId" : "3",
+    "requisiteStageRefIds" : [ ],
+    "type" : "deploy"
+  }, {
+    "clusters" : [ {
+      "account" : "azure-k8s",
+      "application" : "multicloud",
+      "cloudProvider" : "kubernetes",
+      "containers" : [ {
+        "args" : [ ],
+        "command" : [ ],
+        "envFrom" : [ ],
+        "envVars" : [ ],
+        "imageDescription" : {
+          "account" : "my-docker-registry",
+          "fromTrigger" : true,
+          "imageId" : "index.docker.io/library/nginx (Tag resolved at runtime)",
+          "registry" : "index.docker.io",
+          "repository" : "library/nginx",
+          "tag" : ""
+        },
+        "imagePullPolicy" : "IFNOTPRESENT",
+        "limits" : { },
+        "name" : "library-nginx",
+        "ports" : [ {
+          "containerPort" : 80,
+          "name" : "http",
+          "protocol" : "TCP"
+        } ],
+        "requests" : { },
+        "volumeMounts" : [ ]
+      } ],
+      "deployment" : {
+        "deploymentStrategy" : {
+          "rollingUpdate" : {
+            "maxSurge" : 1,
+            "maxUnavailable" : 1
+          },
+          "type" : "RollingUpdate"
+        },
+        "enabled" : false,
+        "minReadySeconds" : 0
+      },
+      "dnsPolicy" : "ClusterFirst",
+      "initContainers" : [ ],
+      "interestingHealthProviderNames" : [ "KubernetesContainer", "KubernetesPod" ],
+      "loadBalancers" : [ "multicloud-prod" ],
+      "maxRemainingAsgs" : 2,
+      "namespace" : "default",
+      "nodeSelector" : { },
+      "podAnnotations" : { },
+      "provider" : "kubernetes",
+      "region" : "default",
+      "replicaSetAnnotations" : { },
+      "stack" : "prod",
+      "strategy" : "redblack",
+      "targetSize" : 1,
+      "terminationGracePeriodSeconds" : 30,
+      "useSourceCapacity" : false,
+      "volumeSources" : [ ]
+    } ],
+    "name" : "Deploy Azure",
+    "refId" : "4",
+    "requisiteStageRefIds" : [ ],
+    "type" : "deploy"
+  }, {
+    "clusters" : [ {
+      "account" : "icp-k8s",
+      "application" : "multicloud",
+      "cloudProvider" : "kubernetes",
+      "containers" : [ {
+        "args" : [ ],
+        "command" : [ ],
+        "envFrom" : [ ],
+        "envVars" : [ ],
+        "imageDescription" : {
+          "account" : "my-docker-registry",
+          "fromTrigger" : true,
+          "imageId" : "index.docker.io/library/nginx (Tag resolved at runtime)",
+          "registry" : "index.docker.io",
+          "repository" : "library/nginx",
+          "tag" : ""
+        },
+        "imagePullPolicy" : "IFNOTPRESENT",
+        "limits" : { },
+        "name" : "library-nginx",
+        "ports" : [ {
+          "containerPort" : 80,
+          "name" : "http",
+          "protocol" : "TCP"
+        } ],
+        "requests" : { },
+        "volumeMounts" : [ ]
+      } ],
+      "deployment" : {
+        "deploymentStrategy" : {
+          "rollingUpdate" : {
+            "maxSurge" : 1,
+            "maxUnavailable" : 1
+          },
+          "type" : "RollingUpdate"
+        },
+        "enabled" : false,
+        "minReadySeconds" : 0
+      },
+      "dnsPolicy" : "ClusterFirst",
+      "initContainers" : [ ],
+      "interestingHealthProviderNames" : [ "KubernetesContainer", "KubernetesPod" ],
+      "loadBalancers" : [ "multicloud-prod" ],
+      "maxRemainingAsgs" : 2,
+      "namespace" : "default",
+      "nodeSelector" : { },
+      "podAnnotations" : { },
+      "provider" : "kubernetes",
+      "region" : "default",
+      "replicaSetAnnotations" : { },
+      "scaleDown" : false,
+      "stack" : "prod",
+      "strategy" : "redblack",
+      "targetSize" : 1,
+      "terminationGracePeriodSeconds" : 30,
+      "useSourceCapacity" : false,
+      "volumeSources" : [ ]
+    } ],
+    "name" : "Deploy ICP",
+    "refId" : "5",
+    "requisiteStageRefIds" : [ ],
+    "type" : "deploy"
+  } ],
+  "index" : 0,
+  "id" : "f0dde19c-c1c8-4bb0-8394-5aa780233a87",
+  "triggers" : [ {
+    "account" : "my-docker-registry",
+    "enabled" : true,
+    "organization" : "library",
+    "registry" : "index.docker.io",
+    "repository" : "library/nginx",
+    "tag" : "",
+    "type" : "docker"
+  } ],
+  "updateTs" : "1553741966000"
+}

@@ -1,0 +1,14 @@
+{
+  "name" : "NGINXNEW",
+  "description" : null,
+  "email" : "vero@spinnaker.com",
+  "updateTs" : "1554331912000",
+  "createTs" : "1554268247975",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "user" : "[anonymous]",
+  "dataSources" : {
+    "disabled" : [ "canaryConfigs" ],
+    "enabled" : [ ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "APP",
+  "description" : null,
+  "email" : "vero@spin.com",
+  "updateTs" : null,
+  "createTs" : "1553639107503",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "user" : "[anonymous]"
+}

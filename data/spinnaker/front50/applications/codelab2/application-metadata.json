@@ -1,0 +1,10 @@
+{
+  "name" : "CODELAB2",
+  "description" : null,
+  "email" : "velo@spinnaker.com",
+  "updateTs" : null,
+  "createTs" : "1542150170969",
+  "lastModifiedBy" : "anonymous",
+  "cloudProviders" : "kubernetes",
+  "user" : "[anonymous]"
+}

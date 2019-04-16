@@ -1,0 +1,11 @@
+{
+  "keepWaitingPipelines" : false,
+  "limitConcurrent" : true,
+  "application" : "examplecanary",
+  "lastModifiedBy" : "anonymous",
+  "name" : "example",
+  "stages" : [ ],
+  "index" : 0,
+  "id" : "e14dfc82-effa-440b-b291-6c741e60ffdf",
+  "triggers" : [ ]
+}

@@ -18,7 +18,7 @@ Para acceder al dashboard, se debe de crear un canal seguro para el clúster med
 ```
  nohup kubectl proxy --address="<ip-master>" -p 443 --accept-hosts='^*$' &
 ```
-En la bandera --address ses especifica la dirección IP del servidor master de Kubernetes, y el puerto que se abrirá para el dashboard será el 443. 
+En la bandera --address se especifica la dirección IP del servidor master de Kubernetes, y el puerto que se abrirá para el dashboard será el 443. 
 
 Para verificar el estado del proceso se puede realizar con el siguiente comando. 
 ```

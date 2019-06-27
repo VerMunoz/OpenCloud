@@ -1,0 +1,41 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-prometheus-server
+  namespace: monitoring
+  labels:
+    type: local
+    app: prometheus
+    chart: prometheus-8.11.4
+    component: server
+    release: prometheus
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
+  dataSource: null
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-prometheus-server-1
+  namespace: monitoring
+  labels:
+    type: local
+    app: prometheus
+    chart: prometheus-8.11.4
+    component: server
+    release: prometheus
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
+  dataSource: null

@@ -11,7 +11,6 @@ Está compuesto por una guía para la instalación de un clúster privado basado
     - Instalación   
         - [Paso a paso](https://github.com/VerMunoz/OpenCloud/blob/master/docs/k8s-local.md)
         - [Automatizado (Kubespray)]()
-        - [En GCP](https://github.com/VerMunoz/OpenCloud/blob/master/docs/gcp.md)
     - [Dashboard](https://github.com/VerMunoz/OpenCloud/blob/master/docs/dashboard-k8s.md)
     - [Ingress](https://github.com/VerMunoz/OpenCloud/blob/master/docs/ingress.md)
     - [High availability]()

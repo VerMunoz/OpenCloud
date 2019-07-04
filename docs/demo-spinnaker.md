@@ -23,8 +23,6 @@ Los eventos que ocurren en esta demo son los siguientes:
     - Configurar docker registry [GCR](https://github.com/VerMunoz/OpenCloud/blob/master/docs/spinnaker.md#gcr) y vincularlo con las cuentas anteriormente mencionadas. 
 - Cuenta en Github.
 - Proyecto en GCP. 
-
-
 ## Código de la aplicación 
 Para obtener el código de la aplicación, clonar el siguiente repositorio.
 ```
@@ -172,4 +170,3 @@ De la misma forma que se crearon los pipelines de ambiente de prueba y validaci�
 - Resize server group.
 - Wait.
 - Destroy server group.
-

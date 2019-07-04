@@ -153,8 +153,9 @@ extraContainers: |
 ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
 ##
 persistence:
-  enabled: false
-  # storageClassName: default
+  enabled: true
+  name: pvc-grafana
+  storageClassName: local-storage
   accessModes:
     - ReadWriteOnce
   size: 10Gi
@@ -226,17 +227,23 @@ extraSecretMounts: []
 
 ## Additional grafana server volume mounts
 # Defines additional volume mounts.
-extraVolumeMounts: []
-  # - name: extra-volume
-  #   mountPath: /mnt/volume
-  #   readOnly: true
-  #   existingClaim: volume-claim
-
+#extraVolumeMounts: []
+ #  - name: extra-volume
+  #   mountPath: /mnt/data
+   #  readOnly: true
+   #  existingClaim: volume-claim
+extraVolumeMounts:
+  - name: plugins
+    mountPath: /var/lib/grafana/plugins
+    subPath: configs/grafana/plugins
+ #   existingClaim: existing-grafana-claim
+    readOnly: false
 ## Pass the plugins you want installed as a list.
 ##
-plugins: []
-  # - digrich-bubblechart-panel
+#plugins: [
+ #  - grafana-kubernetes-app
   # - grafana-clock-panel
+  ]
 
 ## Configure grafana datasources
 ## ref: http://docs.grafana.org/administration/provisioning/#datasources
@@ -293,9 +300,12 @@ dashboardProviders: {}
 ##
 ## dashboards per provider, use provider name as key.
 ##
-dashboards: 
-  default:
- z   custom-dashboard:
+dashboards: {}
+  # default:
+  #   some-dashboard:
+  #     json: |
+  #       $RAW_JSON
+  #   custom-dashboard:
   #     file: dashboards/custom-dashboard.json
   #   prometheus-stats:
   #     gnetId: 2

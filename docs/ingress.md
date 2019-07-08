@@ -1,10 +1,10 @@
-# Ingress controller con LoadBalancer externo (HaProxy)
-## Arquitectura 
+# Ingress controller
+
+### Arquitectura 
 
 ![Ingress](https://github.com/VerMunoz/OpenCloud/blob/master/images/ingres-nginx.png?raw=true)
 
 
-## Ingress Controller k8s 
 ### Instalación de Ingress con Nginx 
 
 La instalación contiene la creación de los siguientes elementos.
@@ -20,6 +20,8 @@ Instalación de ingress con Nginx
 ```
 kubectl create -f install/ingress-nginx.yaml
 ```
+
+
 ## LoadBalancer HaProxy externo 
 ## Prerrequisitos 
 - Una VM  con sistema operativo Centos 7, independiente al cluster de Kubernetes, pero que tenga comunicación al clúster. 
@@ -82,7 +84,3 @@ Iniciar el servicio de HaProxy.
 ```
 systemctl start haproxy 
 ```
-
-
-
-

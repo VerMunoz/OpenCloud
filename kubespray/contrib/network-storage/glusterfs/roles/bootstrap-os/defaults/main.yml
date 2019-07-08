@@ -1,0 +1,10 @@
+---
+pip_python_coreos_modules:
+  - httplib2
+  - six
+
+override_system_hostname: true
+coreos_auto_upgrade: true
+
+# Install epel repo on Centos/RHEL
+epel_enabled: false

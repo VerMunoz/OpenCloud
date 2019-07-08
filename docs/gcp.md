@@ -1,4 +1,4 @@
-# GCP  - Spinnaker
+# GCP 
 
 Este documento está orientado a la preparación de GCP para utilizarlo con Docker Registry ([GCR](#id1)) y una cuenta de Kubernetes ([GKE](#id2)) para vincularlo con Spinnaker y probar un ambiente multicloud.
 

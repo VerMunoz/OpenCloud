@@ -20,12 +20,12 @@ Está compuesto por una guía para la instalación de un clúster privado basado
 - [Kubespray]()
 - [Tareas programadas]()
 ### Observability
-- Monitoring 
+- Metrics
     - [Prometheus y Grafana](https://github.com/VerMunoz/OpenCloud/blob/master/docs/prometheus.md)
     - [Prometheus (helm)]()
     - [Grafana (helm)]()
     - [Dashboards](https://github.com/VerMunoz/OpenCloud/blob/master/docs/grafana.md)
-### Storage s3
+### Storage 
 - [Minio](https://github.com/VerMunoz/OpenCloud/blob/master/docs/minio.md)
 ### Container Registry
 - [Harbor](https://github.com/VerMunoz/OpenCloud/blob/master/docs/harbor.md)
@@ -41,3 +41,4 @@ Está compuesto por una guía para la instalación de un clúster privado basado
 ### Service Mesh 
 - [Istio](https://github.com/VerMunoz/OpenCloud/blob/master/docs/istio.md)
 
+### Versiones

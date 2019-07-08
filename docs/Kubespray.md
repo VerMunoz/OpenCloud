@@ -1,6 +1,7 @@
 # Instalación de Kubernetes con Kubespray
 
-**Nota:** Se recomienda que para la instalación con Kubespray se tenga un nodo bastion que tenga comunicación con la infraestructura donde se desea instalar Kubernetes. 
+**Nota:** Se recomienda que para la instalación con Kubespray se tenga un nodo bastion que tenga comunicación con la infraestructura donde se desea instalar Kubernetes, la infraestructura debe de tener un total de nodos en número impar. 
+
 
 ## Prerrequisitos
 La instalación de Kubernetes con Kubespray se realiza mediante Ansible playbooks, por lo que se tiene que dirigir al directorio siguiente para poder ejecutar la instalación. 

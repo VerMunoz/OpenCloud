@@ -11,3 +11,5 @@ kubectl apply -f pv-pvc.yaml
 
 #Instalar grafana
 helm install --name grafana stable/grafana --namespace monitoring --name grafana --values=values-graf.yaml
+## Sin PVC 
+#helm install --name grafana stable/grafana --namespace monitoring --name grafana --set=ingress.enabled=True,ingress.hosts={grafana.opencloud.amx.com},service.type=NodePort

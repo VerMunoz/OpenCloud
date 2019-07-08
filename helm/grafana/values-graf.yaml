@@ -293,14 +293,17 @@ dashboardProviders: {}
 ##
 ## dashboards per provider, use provider name as key.
 ##
-dashboards: 
-  default:
- z   custom-dashboard:
-  #     file: dashboards/custom-dashboard.json
-  #   prometheus-stats:
-  #     gnetId: 2
-  #     revision: 2
-  #     datasource: Prometheus
+#dashboards: 
+#  default:
+  #   some-dashboard:
+  #     json: |
+  #       $RAW_JSON
+#    custom-dashboard:
+#     file: /root/helm/grafana/dash-kube-pod.json
+#   prometheus-stats:
+#      gnetId: 2
+#      revision: 2
+#      datasource: Prometheus
   #   local-dashboard:
   #     url: https://example.com/repository/test.json
   #   local-dashboard-base64:
@@ -407,3 +410,6 @@ sidecar:
     # Otherwise the namespace in which the sidecar is running will be used.
     # It's also possible to specify ALL to search in all namespaces
     searchNamespace: null
+
+
+

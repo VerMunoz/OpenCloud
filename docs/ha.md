@@ -1,13 +1,18 @@
-# High Availability
+# High Availability K8s
 
+Para tener un clúster de kubernetes en alta disponibilidad, se debe de tener dos o más master, para ello, se debe de instalar con [Kubespray](https://github.com/VerMunoz/OpenCloud/blob/master/docs/Kubespray.md), agregando al inventario de infraestructura dos o más master. 
 
 
 ## LoadBalancer HaProxy externo 
+
+Para que Kubernetes solo tenga una sola salida, se instala un LoadBalancer HAproxy externo, para que balancee la salida de todos los nodos tipo ``Node Port``.
+
+
 ## Prerrequisitos 
 - Una VM  con sistema operativo Centos 7, independiente al cluster de Kubernetes, pero que tenga comunicación al clúster. 
 
 ## Arquitectura 
-![Haproxy](https://github.com/VerMunoz/OpenCloud/blob/master/images/ingres-k8s.png?raw=true)
+![Haproxy](https://github.com/VerMunoz/OpenCloud/blob/master/images/Haproxy.png?raw=true)
 
 ## Instalación de HaProxy
 Instalación del paquete de HaProxy en Centos7. 
@@ -64,5 +69,3 @@ Iniciar el servicio de HaProxy.
 ```
 systemctl start haproxy 
 ```
-
-

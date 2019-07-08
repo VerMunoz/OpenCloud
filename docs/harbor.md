@@ -1,18 +1,10 @@
 # Harbor (Container Registry)
 
-## Instalación con Helm 
-
-
-## Componentes 
-
-### Job service
+## Instalación con Docker
 
 
 
 ### Docker registry 
-
-
-
 Agregar la siguiente línea en el archivo de configuración ``/etc/docker/daemon.json`` para agregar un registry inseguro. 
 
 ```
@@ -25,11 +17,3 @@ Reiniciar docker
 systemctl daemon-reload
 systemctl restart docker
 ```
-
-
-{
-    "insecure-registries" : [ "192.10.24.21:80" ]
-}
-
-
-

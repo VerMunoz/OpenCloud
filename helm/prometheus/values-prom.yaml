@@ -892,7 +892,8 @@ pushgateway:
     loadBalancerIP: ""
     loadBalancerSourceRanges: []
     servicePort: 9091
-    type: ClusterIP
+    type: NodePort
+    nodePort: 30002 
 
   persistentVolume:
     ## If true, pushgateway will create/use a Persistent Volume Claim

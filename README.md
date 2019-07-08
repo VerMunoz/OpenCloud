@@ -10,14 +10,14 @@ Está compuesto por una guía para la instalación de un clúster privado basado
 - Kubernetes 
     - Instalación   
         - [Paso a paso](https://github.com/VerMunoz/OpenCloud/blob/master/docs/k8s-local.md)
-        - [Automatizado (Kubespray)]()
+        - [Automatizado (Kubespray)](https://github.com/VerMunoz/OpenCloud/blob/master/docs/Kubespray.md)
     - [Dashboard](https://github.com/VerMunoz/OpenCloud/blob/master/docs/dashboard-k8s.md)
     - [Ingress](https://github.com/VerMunoz/OpenCloud/blob/master/docs/ingress.md)
     - [High availability]()
     - [Despliegue de una aplicación](https://github.com/VerMunoz/OpenCloud/blob/master/docs/k8s-app-demo.md)
 ### Automatization 
 - [Helm]()
-- [Kubespray]()
+- [Kubespray](https://github.com/VerMunoz/OpenCloud/blob/master/docs/Kubespray.md)
 - [Tareas programadas]()
 ### Observability
 - Metrics
@@ -40,5 +40,7 @@ Está compuesto por una guía para la instalación de un clúster privado basado
 - [Gitlab]()
 ### Service Mesh 
 - [Istio](https://github.com/VerMunoz/OpenCloud/blob/master/docs/istio.md)
+
+### Multicloud 
 
 ### Versiones

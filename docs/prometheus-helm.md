@@ -1,5 +1,5 @@
 # Instalación de Prometheus con Helm 
-Los elementos que se instalan de Prometheus con Helm son los siguientes: 
+Los elementos que se instalan de Prometheus v2.10.0 con Helm son los siguientes: 
 
 - Alertmanager
 - Node exporter
@@ -18,7 +18,7 @@ cd helm/prometheus
 ```
 Instalar prometheus
 ```
-helm install --name prometheus stable/prometheus --namespace monitoring  --values=values-prom.yaml
+./helm/prometheus/runit-prom.sh 
 ```
 En el archivo ``values-prom.yaml`` está una configuración personalizada para la instalación, si se desea saber más vea el git de [helm con prometheus](https://github.com/helm/charts/tree/master/stable/prometheus)
 

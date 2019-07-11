@@ -1,10 +1,18 @@
-# Grafana 
+# Grafana Dashboards
 
 Para acceder a Grafana, el usuario y contraseña por default es: 
 
 `` Usuario: admin ``
 
 `` Contraseña: admin ``
+
+Si se instaló con [Helm](https://github.com/VerMunoz/OpenCloud/blob/master/docs/grafana-helm.md), la contraseña la puede verificar con el siguiente comando. 
+```
+kubectl get secret -n monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+
+****************
+```
+
 
 Para configurar el dashboard de kubernetes, se realizan los siguientes pasos: 
 
@@ -28,7 +36,7 @@ La url es la dirección dónde Grafana recolecta la información, por lo que per
 
 Importar dashboard. 
 
-Subir json file `` dashboards/grafana-k8s-dashboard.json `` 
+Subir json file `` dashboards/k8s-monitoring.json `` 
 
 ```
 Options: 
@@ -43,5 +51,20 @@ Prometheus: Pormetheus-k8s
 Una vez realizados estos pasos, el dashboard está listo, si no muestra datos o aparece N/A en el dashboard, verificar que la url del data source pertenezca a la url de Prometheus y que el servicio esté funcionando. 
 
 ![AddSource](https://raw.githubusercontent.com/VerMunoz/OpenCloud/master/images/grafana-dashboard.png)
+
+## Dashboards disponibles: 
+
+Kubernetes Cluster (Prometheus)
+``dashboards/k8s-general.json`` 
+
+Kubernetes cluster monitoring (via Promethues)
+``k8s-monitoring.json``
+
+Kubernetes: POD Overview
+``k8s-pod.json  ``
+
+VM Platform Stats
+``k8s-machine.json ``
+
 
 

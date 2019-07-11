@@ -43,3 +43,20 @@ Está compuesto por una guía para la instalación de un clúster privado basado
 
 ### Versiones
 
+| Aplicacion    | Version 1              | Version 2   |
+| :------------ | :--------------------- | :---------- |
+| Docker        | v.13.1                 | v.18.06.1   | 
+| Kubernetes    | v.11.3                 | v.1.13.2    |
+| Dashboard k8s | v.1.10.0               |             |
+| Helm          | v.2.14.1               |             |
+| Grafana       | v.4.4.3                | v.6.2.4     |
+| Prometheus    | v.2.1.0                | v.2.10.0    |
+| Harbor        | v.1.7.5                |             |
+| Istio         | v.1.0.5                |             |
+| Halyard       | v.1.19.2               |             |
+| Spinnaker     | v.1.10.4               |             |
+| Minio         | 2018-10-18T00-28-58Z   |             |
+
+
+
+

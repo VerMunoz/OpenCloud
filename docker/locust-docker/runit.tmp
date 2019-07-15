@@ -1,0 +1,7 @@
+#!/bin/sh
+
+docker run \
+    -p 8089:8089 -d  \
+    -e ATTACKED_HOST=http://192.10.24.4:31474 \
+    --volume=/home/vmunoz/locus/locust:/locust:z \
+    locust

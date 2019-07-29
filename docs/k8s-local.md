@@ -24,7 +24,7 @@ En todos los nodos ejecutar el script de instalación de k8s, en este contiene a
 ./shell/k8s-local.sh 
 ```
 
-## Preparación del master
+## Preparación del cluster 
 
 ### Para el master 
 Para iniciar el clúster, es necesario realizar el comando kubeadm init, el cual ejecutará comprobaciones para garantizar que la máquina está lista para ejecutar kubernetes, y posteriormente, descarga e instala los componentes del plano de control del clúster. 

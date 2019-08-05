@@ -10,7 +10,7 @@ kubectl delete pvc prometheus-alertmanager  prometheus-server -n monitoring
 kubectl delete pv pv-prometheus-server-1 pv-prometheus-server
 
 #Crear PV y PVC
-kubectl apply -f pv.yaml
+kubectl apply -f helm/prometheus/pv.yaml
 
 #Instalar prometheus
-helm install stable/prometheus --namespace monitoring --name prometheus --values=values-prom.yaml
+helm install stable/prometheus --namespace monitoring --name prometheus --values=helm/prometheus/values-prom.yaml

@@ -34,34 +34,42 @@ docker ps
 CONTAINER ID        IMAGE                     COMMAND             CREATED             STATUS               . . .  e6c827f6f634        gitlab/gitlab-ee:latest   "/assets/wrapper"   7 weeks ago         Up 7 weeks (healthy) . . . 
 ```
 
-## Instalación Gitlab Runners en Kubernetes
+## Instalación Gitlab Runners en Kubernetes con Helm
 
 Agregar el repositorio de Gitlab
 ```
 helm repo add gitlab https://charts.gitlab.io
 ```
-Instalar gitlab Runner 
+
 Modificar el archivo `` values.yaml ``.
 
 Ingresar en el parámetro  ``gitlabUrl`` que es el hostname con el que se levantó GitLab.
-Ingresar el token en el parámetro ``runnerRegistrationToken`` que está en la UI de GitLab en la sección ``Admin Area -> Runners -> Copy Token `` 
-
-
-![GitlabToken](https://raw.githubusercontent.com/VerMunoz/OpenCloud/master/images/Gitlab-token.png)
-
 ```
 gitlabUrl: http://<hostame.com>
+```
+
+Agregar el token en el parámetro ``runnerRegistrationToken`` que está en la UI de GitLab en la sección ``Admin Area -> Runners -> Copy Token `` .
+
+```
 runnerRegistrationToken: MZURVL8bhhsoGGVGhY-z
 ```
 
+![GitlabToken](https://raw.githubusercontent.com/VerMunoz/OpenCloud/master/images/Gitlab-token.png)
 
 En dado caso que se presente un issue de que el runner no reconoce el nombre de dominio del servicio, agregar: 
 ```
 runners: []
   cloneUrl: http://<ip-servidor-gitlab>
 ```
-
+Instalación de Gitlab Runner 
 
 ```
 helm install --namespace gitlab --name gitlab-runner -f values.yaml gitlab/gitlab-runner
+```
+Verificar que el pod esté activo. 
+```
+kubectl get pods -n gitlab
+
+NAME                                          READY   STATUS    RESTARTS   AGE
+gitlab-runner-gitlab-runner-8bb776674-gxz99   1/1     Running   0          1m
 ```

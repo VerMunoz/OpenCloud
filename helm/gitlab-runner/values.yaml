@@ -22,7 +22,9 @@ gitlabUrl: http://192.10.24.88/
 ## be retrieved from your GitLab Instance.
 ## ref: https://docs.gitlab.com/ce/ci/runners/README.html
 ##
-runnerRegistrationToken: JYsXFx4AiESUE3j3cXT5
+runnerRegistrationToken: MZURVL8bhhsoGGVGhY-z
+#runnerRegistrationToken: UGya1CosyUWtLs6WDs1W
+#runnerRegistrationToken: JYsXFx4AiESUE3j3cXT5
 
 ## The Runner Token for adding new Runners to the GitLab Server. This must
 ## be retrieved from your GitLab Instance. It is token of already registered runner.
@@ -87,7 +89,6 @@ runners:
   ## Default container image to use for builds when none is specified
   ##
   image: ubuntu:16.04
-
   ## Specify one or more imagePullSecrets
   ##
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
@@ -119,6 +120,7 @@ runners:
   ## ref: https://docs.gitlab.com/runner/executors/kubernetes.html#using-docker-dind
   ##
   privileged: true
+  cache_dir: "cache"
 
   ## The name of the secret containing runner-token and runner-registration-token
   # secret: gitlab-runner
@@ -154,7 +156,7 @@ runners:
   ##
   ## Access using access-id and private-key:
   ## Create a secret 'gcsaccess' containing 'gcs-access-id' & 'gcs-private-key'.
-  ## ref: https://docs.gitlab.com/runner/configuration/advanced-configuration.html#the-runners-cache-gcs-section
+  ## ref: https://docs.gitlab.com/runner/configuration/advanced-configuration.html#the-runners-uache-gcs-section
   ## You could configure
   ## $ kubectl create secret generic gcsaccess \
   ##   --from-literal=gcs-access-id="YourAccessID" \
@@ -236,7 +238,6 @@ runners:
   ##
   # env:
   #   NAME: VALUE
-
 
 ## Configure resource requests and limits
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/

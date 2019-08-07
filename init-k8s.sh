@@ -18,8 +18,12 @@ kubectl apply -f install/ingress-nginx.yaml
 kubectl apply -f deploys/kubernetes-dashboard.yaml
 kubectl apply -f roles/dashboard-admin.yaml
 
-##Exponer Dashboard Kubernetes (address master) 
-#nohup kubectl proxy --address="192.10.24.4" -p 443 --accept-hosts='^*$' &
+## Exponer Dashboard Kubernetes (address master) 
+nohup kubectl proxy --address="192.168.1.186" -p 443 --accept-hosts='^*$' &
+
+## Instalar Gitlab Runners
+helm repo add gitlab https://charts.gitlab.io
+helm install --namespace gitlab --name gitlab-runner -f values.yaml gitlab/gitlab-runner
 
 ## Instalar prometheus with Helm
 ./helm/prometheus/runit-prom.sh 

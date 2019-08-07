@@ -11,11 +11,6 @@ Los elementos que se instalan de Prometheus v2.10.0 con Helm son los siguientes:
 - Tener instalado [Helm](https://github.com/VerMunoz/OpenCloud/blob/master/docs/helm.md)
 
 ## Instalación 
-
-Dirigirse al directorio.
-```
-cd helm/prometheus
-```
 Instalar prometheus
 ```
 ./helm/prometheus/runit-prom.sh 

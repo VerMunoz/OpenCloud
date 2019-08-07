@@ -7,10 +7,6 @@ Se instalará grafana v6.2.4
 
 ## Instalación 
 
-Dirigirse al directorio.
-```
-cd helm/grafana
-```
 Instalar grafana
 ```
 ./helm/grafana/runit-graf.sh 

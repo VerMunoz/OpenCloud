@@ -54,7 +54,7 @@ Está compuesto por una guía para la instalación de un clúster privado basado
 | Harbor        | v.1.7.5                |             |
 | Istio         | v.1.0.5                |             |
 | Halyard       | v.1.19.2               |             |
-| Spinnaker     | v.1.10.4               |             |
+| Spinnaker     | v.1.10.4               |   v.13.12   |
 | Minio         | 2018-10-18T00-28-58Z   |             |
 
 

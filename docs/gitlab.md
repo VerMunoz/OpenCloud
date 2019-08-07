@@ -45,13 +45,14 @@ Modificar el archivo `` values.yaml ``.
 
 Ingresar en el parámetro  ``gitlabUrl`` que es el hostname con el que se levantó GitLab.
 Ingresar el token en el parámetro ``runnerRegistrationToken`` que está en la UI de GitLab en la sección ``Admin Area -> Runners -> Copy Token `` 
+
+
+![GitlabToken](https://raw.githubusercontent.com/VerMunoz/OpenCloud/master/images/Gitlab-token.png)
+
 ```
 gitlabUrl: http://<hostame.com>
 runnerRegistrationToken: MZURVL8bhhsoGGVGhY-z
 ```
-
-
-
 
 
 En dado caso que se presente un issue de que el runner no reconoce el nombre de dominio del servicio, agregar: 

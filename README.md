@@ -37,7 +37,7 @@ Está compuesto por una guía para la instalación de un clúster privado basado
     - Multicloud
         - [GCP](https://github.com/VerMunoz/OpenCloud/blob/master/docs/gcp.md)
     - [Demo](https://github.com/VerMunoz/OpenCloud/blob/master/docs/demo-spinnaker.md)
-- [Gitlab]()
+- [Gitlab](https://github.com/VerMunoz/OpenCloud/blob/master/docs/gitlab.md)
 ### Service Mesh 
 - [Istio](https://github.com/VerMunoz/OpenCloud/blob/master/docs/istio.md)
 
@@ -54,7 +54,7 @@ Está compuesto por una guía para la instalación de un clúster privado basado
 | Harbor        | v.1.7.5                |             |
 | Istio         | v.1.0.5                |             |
 | Halyard       | v.1.19.2               |             |
-| Spinnaker     | v.1.10.4               |   v.13.12   |
+| Spinnaker     | v.1.10.4               | v.1.15.1    |
 | Minio         | 2018-10-18T00-28-58Z   |             |
 
 

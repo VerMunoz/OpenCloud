@@ -13,3 +13,9 @@ kubectl label namespace <name-namespace> istio-injection=disable --overwrite
 Version 1.13.6 Issue Canary 
 
 ``` java.lang.IllegalArgumentException ```
+
+
+Version 1.13.12
+No tiene Jobs v2 Manifest
+
+Versión +1.13.12 no tiene Registry en UI al configurar Server Group 

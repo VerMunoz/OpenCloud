@@ -1,6 +1,6 @@
 body  {
 	min-height:100%;
-	background-image: url("/static/stylesheets/demo-spin.png"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3));
+	background-image: url("/static/stylesheets/cloudd.gif"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3));
 	background-blend-mode: overlay;
 	background-size:cover
 }

@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-app
+  name: my-app
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      annotations:
+        prometheus.io/port: '9101'
+        prometheus.io/scrape: 'true'
+      labels:
+        app: my-app
+        version: v1.0.0
+    spec:
+      containers:
+        - env:
+            - name: VERSION
+              value: v1.0.0
+          image: containersol/k8s-deployment-strategies
+          livenessProbe:
+            httpGet:
+              path: /live
+              port: probe
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          name: my-app
+          ports:
+            - containerPort: 8080
+              name: http
+            - containerPort: 8086
+              name: probe
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: probe
+            periodSeconds: 5

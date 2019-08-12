@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: default
+    artifact.spinnaker.io/name: my-app
+    artifact.spinnaker.io/type: kubernetes/service
+    moniker.spinnaker.io/application: strategies
+    moniker.spinnaker.io/cluster: service my-app
+  labels:
+    app: my-app
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: strategies
+  name: my-app
+  namespace: default
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+  selector:
+    app: my-app
+  type: NodePort

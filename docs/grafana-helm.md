@@ -12,6 +12,9 @@ Instalar grafana
 ./helm/grafana/runit-graf.sh 
 ```
 En el archivo ``values-prom.yaml`` está una configuración personalizada para la instalación, si se desea saber más vea el git de [helm con grafana](https://github.com/helm/charts/tree/master/stable/grafana)
+O instalar directamente mediante el comando
+
+
 
 Verificar si el despliegue se realizó correctamente 
 ```

@@ -22,7 +22,7 @@ gitlabUrl: http://192.10.24.88/
 ## be retrieved from your GitLab Instance.
 ## ref: https://docs.gitlab.com/ce/ci/runners/README.html
 ##
-runnerRegistrationToken: MZURVL8bhhsoGGVGhY-z
+runnerRegistrationToken: z4HG-aB-BzT5uwK_VjmW
 #runnerRegistrationToken: UGya1CosyUWtLs6WDs1W
 #runnerRegistrationToken: JYsXFx4AiESUE3j3cXT5
 

@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+##Crear directorios en los nodos $mkdir -p /mnt/data/prometheus
+ 
 ## Instalar Helm
 ./helm/get_helm.sh
 

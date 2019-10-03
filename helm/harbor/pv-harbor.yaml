@@ -1,0 +1,155 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-hrb-registry
+  namespace: harbor
+  labels:
+    type: local
+    app: harbor
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/harbor"
+  dataSource: null
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-hrb-chartmuseum
+  namespace: harbor
+  labels:
+    type: local
+    app: harbor
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/harbor"
+  dataSource: null
+--- 
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-hrb-jobservice
+  namespace: harbor
+  labels:
+    type: local
+    app: harbor
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/harbor"
+  dataSource: null
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-hrb-database
+  namespace: harbor
+  labels:
+    type: local
+    app: harbor
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/harbor"
+  dataSource: null
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-hrb-redis
+  namespace: harbor
+  labels:
+    type: local
+    app: harbor
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/harbor"
+  dataSource: null
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-hbr-registry
+  namespace: harbor
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-hbr-chartmuseum
+  namespace: harbor
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-hbr-jobservice
+  namespace: harbor
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-hbr-database
+  namespace: harbor
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-hbr-redis
+  namespace: harbor
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+

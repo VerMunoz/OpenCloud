@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##Crear storageclass (local)
-kubectl apply -f storageclass.yaml
+kubectl apply -f helm/prometheus/storageclass.yaml
 
 ##Eliminar pvc existentes
 kubectl delete pvc prometheus-alertmanager  prometheus-server -n monitoring

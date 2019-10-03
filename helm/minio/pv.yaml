@@ -1,0 +1,30 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-minio
+  namespace: minio
+  labels:
+    type: local
+    app: minio
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/minio"
+  dataSource: null
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-minio
+  namespace: minio
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi

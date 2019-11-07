@@ -29,7 +29,7 @@ Los elementos que se instalarán con docker compose son los siguientes:
 ### Instalación 
 Descomprimir el paquete install/harbor-online-installer-v1.7.5.tgz
 ```
-tar xvf install/harbor-online-installer-v1.7.5.tgz 
+tar -xvf harbor-installer-v1.7.5.tar
 ```
 
 Situarse en el directorio harbor

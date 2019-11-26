@@ -58,6 +58,8 @@ cloudbuild.yaml location: /cloudbuild.yaml
 ```
 Seleccionar `` Create trigger ``.
 
+Habilitar dentro de GCP `` API y Servicios `` -->  ``Cloud Resource Manager ``, para versiones mayores de Spinnaker 1.15 
+
 Para probar la compilación y generar el registro del contenedor, realizar los siguientes pasos. 
 
 ```

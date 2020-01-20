@@ -1,1 +1,13 @@
 F0805 16:15:16.869985    7800 proxy.go:158] listen tcp 192.10.24.4:443: bind: cannot assign requested address
+F0115 15:36:20.658372   46920 proxy.go:158] listen tcp 192.168.1.186:443: bind: address already in use
+Starting to serve on 192.168.1.186:443
+I0115 15:37:20.506936   47674 log.go:172] http: proxy error: context canceled
+I0115 15:39:09.032455   47674 log.go:172] http: proxy error: context canceled
+I0115 15:39:10.708238   47674 log.go:172] http: proxy error: context canceled
+I0115 15:39:11.244556   47674 log.go:172] http: proxy error: context canceled
+I0115 15:39:11.699251   47674 log.go:172] http: proxy error: context canceled
+I0115 15:39:12.109077   47674 log.go:172] http: proxy error: context canceled
+I0115 15:39:31.153885   47674 log.go:172] http: proxy error: context canceled
+Starting to serve on 192.168.1.186:443
+I0115 15:40:11.225314   50467 log.go:172] http: proxy error: context canceled
+I0115 15:41:34.290980   50467 log.go:172] http: proxy error: context canceled

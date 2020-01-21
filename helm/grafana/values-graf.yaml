@@ -391,7 +391,7 @@ sidecar:
   # skipTlsVerify Set to true to skip tls verification for kube api calls
   # skipTlsVerify: true
   dashboards:
-    enabled: false
+    enabled: true
     # label that the configmaps with dashboards are marked with
     label: grafana_dashboard
     # folder in the pod that should hold the collected dashboards (unless `defaultFolderName` is set)
@@ -403,7 +403,7 @@ sidecar:
     # It's also possible to specify ALL to search in all namespaces
     searchNamespace: null
   datasources:
-    enabled: false
+    enabled: true
     # label that the configmaps with datasources are marked with
     label: grafana_datasource
     # If specified, the sidecar will search for datasource config-maps inside this namespace.

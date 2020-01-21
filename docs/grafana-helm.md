@@ -118,4 +118,12 @@ helm delete --purge grafana
 ./helm/grafana/runit-graf.sh 
 ```
 
+### Acceder a la UI 
 
+Para saber el password de grafana es necesario correr el siguiente comando. 
+```
+kubectl get secret -n monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+
+fIuMPR50Bx32ry3KWrosU650bS5oSqDftA7q5YGd
+
+```
